@@ -1,4 +1,5 @@
 import { useContext, useState, FormEvent } from 'react'
+import {canSSRGuest} from '../utils/canSSRGuest';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/home.module.scss'
@@ -14,7 +15,6 @@ import { AuthContext } from '../contexts/AuthContext'
 
 import {toast} from 'react-toastify'
 
-import {canSSRGuest} from '../utils/canSSRGuest';
 
 export default function Home() {
 

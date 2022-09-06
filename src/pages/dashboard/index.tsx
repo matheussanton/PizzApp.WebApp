@@ -1,7 +1,25 @@
+import {canSSRAuth} from '../../utils/canSSRAuth';
+import Head from 'next/head'
+
+import {Header} from '../../components/Header/'
+
 export default function Dashboard() {
     return(
-        <div>
-            <h1>Bem vindo ao painel</h1>
-        </div>
+        <>
+            <Head>
+                <title>Painel - PizzApp</title>
+            </Head>
+
+            <Header/>
+            <div>
+                <h1>Painel</h1>
+            </div>
+        </>
     )
 }
+
+export const getServerSideProps = canSSRAuth(async (ctx) => {
+    return {
+      props: {}
+    }
+  });

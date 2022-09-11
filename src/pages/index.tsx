@@ -1,5 +1,5 @@
 import { useContext, useState, FormEvent } from 'react'
-import {canSSRGuest} from '../utils/canSSRGuest';
+import { canSSRGuest } from '../utils/canSSRGuest';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/home.module.scss'
@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 import { AuthContext } from '../contexts/AuthContext'
 
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
 
-    if(email === '' || password === '') {
+    if (email === '' || password === '') {
       toast.warning("Preencha todos os campos.");
       return;
     }

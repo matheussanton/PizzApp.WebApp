@@ -1,18 +1,45 @@
-import {canSSRAuth} from '../../utils/canSSRAuth';
+import { canSSRAuth } from '../../utils/canSSRAuth';
 import Head from 'next/head'
 
-import {Header} from '../../components/Header/'
+import { Header } from '../../components/Header/'
+import styles from './styles.module.scss'
+
+import { FiRefreshCcw } from 'react-icons/fi';
 
 export default function Dashboard() {
-    return(
+    return (
         <>
             <Head>
                 <title>Painel - PizzApp</title>
             </Head>
 
-            <Header/>
             <div>
-                <h1>Painel</h1>
+                <Header />
+
+                <main className={styles.container}>
+                    <div className={styles.containerHeader}>
+                        <h1>Últimos pedidos</h1>
+
+                        <button>
+                            <FiRefreshCcw
+                                color="#ddd"
+                                size={25} />
+                        </button>
+                    </div>
+
+                    <article className={styles.listOrders}>
+
+                        <section className={styles.orderItem}>
+                            <button>
+                                <div className={styles.tag}></div>
+
+                                <span>Mesa X</span>
+                            </button>
+                        </section>
+
+
+                    </article>
+                </main>
             </div>
         </>
     )
@@ -20,6 +47,6 @@ export default function Dashboard() {
 
 export const getServerSideProps = canSSRAuth(async (ctx) => {
     return {
-      props: {}
+        props: {}
     }
-  });
+});

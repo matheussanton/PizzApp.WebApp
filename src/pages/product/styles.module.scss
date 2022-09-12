@@ -49,7 +49,7 @@
 .buttonAdd{
     height: 40px;
     border: 0;
-    background-color: var(--green-900);
+    background-color: var(--red-900);
     border-radius: 0.3rem;
     font-weight: bold;
     font-size: 1.2rem;
@@ -78,9 +78,15 @@
         transition: all 0.4s;
     }
 
-    span:hover{
-        opacity: 1;
-        transform: scale(1.2);
+    // span:hover{
+        
+    // }
+
+    &:hover {
+        span {
+            opacity: 1;
+            transform: scale(1.2);
+        }
     }
 }
 

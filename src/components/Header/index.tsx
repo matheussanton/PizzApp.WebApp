@@ -1,15 +1,15 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
-import {FiLogOut} from 'react-icons/fi'
+import { FiLogOut } from 'react-icons/fi'
 
-import {AuthContext} from '../../contexts/AuthContext'
-import {useContext} from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
+import { useContext } from 'react'
 
-export function Header(){
+export function Header() {
 
-    const {signOut} = useContext(AuthContext)
+    const { signOut } = useContext(AuthContext)
 
-    return(
+    return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <Link href="/dashboard">
@@ -27,7 +27,7 @@ export function Header(){
                         <a>Cardápio</a>
                     </Link>
                     <button onClick={signOut}>
-                        <FiLogOut color="#fff" size={24}/>
+                        <FiLogOut color="#c3c750" size={24} />
                     </button>
                 </nav>
             </div>

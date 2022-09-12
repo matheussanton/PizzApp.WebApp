@@ -22,7 +22,7 @@ export default function Dashboard() {
 
                         <button>
                             <FiRefreshCcw
-                                color="#ddd"
+                                color="#c3c750"
                                 size={25} />
                         </button>
                     </div>

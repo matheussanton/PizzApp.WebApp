@@ -1,9 +1,9 @@
 .button {
     max-width: 600px;
-    background-color: var(--red-900);
+    background-color: var(--orange-900);
     border: 0;
     padding: 0.4rem;
-    color: var(--white);
+    color: var(--black);
     border-radius: 0.5rem;
 
     transition: filter 0.3s;
@@ -21,7 +21,7 @@
 }
 
 .buttonText {
-    color: var(--white);
+    color: var(--black);
 }
 
 @keyframes rotationAnimate {

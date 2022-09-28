@@ -1,0 +1,53 @@
+
+.container{
+    width: 620px;
+    background-color: var(--light-700);
+    color: var(--black);
+  }
+  
+  .container h2{
+    margin: 1rem 0;
+  }
+  
+  .containerItem{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  
+    strong{
+      color: var(--orange-900)
+    }
+  }
+  
+  .description{
+    margin-top: 0.5rem;
+    word-break: break-all;
+  }
+  
+  .buttonOrder{
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: #C3C750;  
+    border: 1px solid #C3C750;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    color: var(--white);
+    // float:  right
+  }
+  
+  .table{
+    font-size: 1.4rem;
+    color: var(--orange-900);
+  }
+  
+  @media screen and (max-width: 700px) {
+      .container{
+        width: 430px;
+      }
+  }
+  
+  @media screen and (max-width: 550px) {
+      .container{
+        width: 330px;
+      }
+  }

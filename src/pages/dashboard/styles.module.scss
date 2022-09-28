@@ -8,7 +8,7 @@
 }
 
 .container h1 {
-    color: var(--white);
+    color: var(--black);
 }
 
 .containerHeader {
@@ -31,16 +31,17 @@
 .orderItem {
     display: flex;
     flex-direction: row;
-    background-color: var(--dark-900);
+    background-color: var(--light-900);
     margin-bottom: 1rem;
     align-items: center;
     border-radius: 0.3rem;
+    cursor: pointer;
 
     button {
         border: 0;
         background: transparent;
         font-size: 1.2rem;
-        color: var(--white);
+        color: var(--black);
         height: 60px;
         align-items: center;
 
@@ -50,11 +51,16 @@
 
 .tag {
     width: 9px;
-    background-color: var(--red-900);
+    background-color: var(--orange-900);
     height: 60px;
     border-radius: 0.3rem 0 0 0.3rem;
 
     margin-right: 1rem;
+}
+
+.emptyList{
+    font-size: 1.2rem;
+    color: var(--gray-100);
 }
 
 

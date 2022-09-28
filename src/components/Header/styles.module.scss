@@ -22,7 +22,7 @@
     align-items:center;
 
     a{
-        color: var(--white);
+        color: var(--black);
         padding: 0 0.5rem;
         display: inline-block;
         position: relative;
@@ -33,7 +33,7 @@
         }
 
         &:hover {
-            color: var(--red-900)
+            color: var(--orange-900)
         }
 
     }

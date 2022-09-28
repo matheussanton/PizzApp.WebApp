@@ -110,7 +110,7 @@ export default function Prodcut({ categoryList }: CategoryProps) {
                         className={styles.form}>
 
                         <label className={styles.labelAvatar}>
-                            <span><FiUpload size={30} color="#FFF" /></span>
+                            <span><FiUpload size={30} color="#c3c750" /></span>
 
                             <input type="file" accept="image/png, image/jpeg"
                                 onChange={handleFileUpload} />

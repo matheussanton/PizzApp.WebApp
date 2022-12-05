@@ -1,4 +1,4 @@
-import {useState, FormEvent, useContext} from 'react'
+import { useState, FormEvent, useContext } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -9,41 +9,42 @@ import { Button } from '../../components/ui/Button'
 
 import logoImg from '../../../public/logo.svg'
 
-import {AuthContext} from '../../contexts/AuthContext'
+import { AuthContext } from '../../contexts/AuthContext'
 
 import Link from 'next/link';
 
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 
 export default function SignUp() {
 
-    const {signUp} = useContext(AuthContext);
+    const { signUp } = useContext(AuthContext);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [fake, setFake] = useState("");
 
     const [loading, setLoading] = useState(false);
 
-    async function handleSignUp(event: FormEvent){
+    async function handleSignUp(event: FormEvent) {
         event.preventDefault();
 
-        if(email === '' || password === '' || name === '') {
+        if (email === '' || password === '' || name === '') {
             toast.warning("Preencha todos os campos.");
             return;
-          }
+        }
 
-          setLoading(true);
+        setLoading(true);
 
-          let data = {
+        let data = {
             name,
             email,
             password
-          }
+        }
 
-          signUp(data);
-          
-          setLoading(false);
+        signUp(data);
+
+        setLoading(false);
     }
     return (
         <>
@@ -61,19 +62,25 @@ export default function SignUp() {
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            />
+                        />
 
                         <Input placeholder="E-mail"
                             type="text"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            />
+                        />
 
                         <Input placeholder="Senha"
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            />
+                        />
+
+                        <Input placeholder="Senha do estabelecimento"
+                            type="password"
+                            value={fake}
+                            onChange={(e) => setFake(e.target.value)}
+                        />
 
                         <Button
                             type="submit"

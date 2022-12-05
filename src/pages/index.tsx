@@ -62,10 +62,17 @@ export default function Home() {
             />
 
             <Input placeholder="Senha"
+              style={{ marginBottom: '0' }}
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+
+            <a
+              style={{ marginTop: '10px', marginBottom: '1.5rem', textAlign: 'right', fontSize: '15px', textDecoration: 'none' }}
+              className={styles.text}>
+              Esqueci minha senha
+            </a>
 
             <Button
               type="submit"
